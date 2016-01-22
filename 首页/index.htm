@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>标题</title>
+<meta name="Keywords" content="关键字">
+<meta name="Description" content="描述">
+<link rel="dns-prefetch" href="http://img.boai.com/default.htm">
+<link rel="apple-touch-icon-precomposed" href="logo_icon.png">
+<link rel="icon" href="favicon.ico" mce_href="http://m.boai.com/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/TouchSlide.1.1.js"></script>
+
+
+<base target="_self" >
+</head>
+<body>
+<div id="nav-over"></div>
+<div id="warmp" class="warmp">
+<header class="header">
+	<section class="fix navbar">
+     
+        <h1 id="title"><img src="images/logo.png"></h1>
+        
+    </section>
+   
+</header>
+<div id="slides" class="slider-focus">
+	<div class="bd">
+    	<ul>
+          <li><a class='pic' href='zt_20youhui/default.htm'><img src='http://img.boai.com/slide/1632.jpg' /></a></li><li><a class='pic' href='../meirongm.boai.com/dongtai/210658.shtml'><img src='http://img.boai.com/slide/1581.jpg' /></a></li><li><a class='pic' href='../meirongm.boai.com/dongtai/210834.shtml'><img src='http://img.boai.com/slide/1596.jpg' /></a></li><li><a class='pic' href='../zhengxingm.boai.com/dongtai/210827.shtml'><img src='http://img.boai.com/slide/1587.jpg' /></a></li><li><a class='pic' href='../kouqiangm.boai.com/dongtai/211210.shtml'><img src='http://img.boai.com/slide/1610.jpg' /></a></li><li><a class='pic' href='../yankem.boai.com/dongtai/210932.shtml'><img src='http://img.boai.com/slide/1607.jpg' /></a></li><li><a class='pic' href='../fukem.boai.com/dongtai/208971.shtml'><img src='http://img.boai.com/slide/1602.jpg' /></a></li><li><a class='pic' href='../nankem.boai.com/dongtai/210351.shtml'><img src='http://img.boai.com/slide/1601.jpg' /></a></li>        </ul>
+	</div>
+    <div class="hd">
+        <ul></ul>
+    </div>
+</div>
+
+<header class="header">
+	<section class="fix navbar">
+       
+        <div id="title"><img style="height:50%" src="images/zhgxxh.png"></div>
+      
+    </section>
+   
+</header>	
+	
+	
+	
+
+
+
+<div class="tab-iteam" id="tab-iteam1">
+	
+    <div class="tab-iteam-con" id="tabBox1-bd">
+    	<div class="con active">
+    		<ul>
+            	<li><a>南昌东方国学<br>教育学校</a></li> 
+            	<li><a>南昌东方国学<br>教育学校</a></li> 
+            	<li><a>南昌东方国学<br>教育学校</a></li> 
+            	<li><a>南昌东方国学<br>教育学校</a></li> 
+            	<li><a>南昌东方国学<br>教育学校</a></li> 
+            	<li><a>南昌东方国学<br>教育学校</a></li> 
+            	<li><a>南昌东方国学<br>教育学校</a></li> 
+            	<li><a>南昌东方国学<br>教育学校</a></li> 
+            	<li><a>南昌东方国学<br>教育学校</a></li> 
+              
+            	
+            </ul>
+        
+        </div>
+        
+    
+    
+    </div>
+</div>
+
+
+
+
+
+
+
+    <div class="copyright">
+      <p>
+        中华国学协会 联系电话 ：0791-88638836   <br>
+地址：南昌市青山湖区青山南路78号蓝天碧水国际公寓805室<br>
+联系地址：华南城三号交易广场4楼c区135-137室 <br>
+ 联系地址：南昌市蒋巷镇蒋巷大道1988号<br>
+
+      </p>
+    </div>
+</div>
+
+<script src="js/swt.js"></script>
+
+
+	<script src="js/history.js"></script>
+<script>	
+	$(".search").bind("click",function(){
+		$("#search-over").fadeIn(50);
+		$("#search-warmp").show();
+		$("html,body").animate({scrollTop:0},200);
+		searchBtn();			
+		//TouchSlide({ slideCell:"#search-tab",titCell:".search-tab-hd li",mainCell:".search-tab-bd"});	//搜索切换
+		//搜索切换
+		$("#search-tab .search-tab-hd li").each(function(i) {$(this).click(function(){$(this).addClass("on").siblings().removeClass("on");$("#search-tab .search-tab-con").eq(i).show().siblings().hide();})
+        });
+		
+		$("#search-over").bind("touchmove",function(e){e.preventDefault()}, false);
+	});			
+	$("#search-clear").bind("click",function(){
+		$("#search-button").text("取消");
+		$("#search-button").removeClass("search-go").addClass("search-cancel");
+		$("#keywords").val("");
+		$(this).hide();		
+	});		
+	$("#keywords").bind("keyup input keywords",function(){
+		searchBtn()
+	});
+	$("#search-button").bind("click",function(){
+		if($(this).hasClass("search-go")){
+			searchGo()//搜索
+		}else{
+			searchCancle();//取消搜索 
+		}
+	});	
+	
+	$("#history .search-change").click(function(){
+		clearCookie('history');
+		getHistory("history",$("#history p"));
+	})
+	function searchBtn(){
+		if($("#keywords").val()==""){
+			$("#search-clear").hide();
+			$("#search-button").text("取消");
+			$("#search-button").removeClass("search-go");
+		}else{
+			$("i#search-clear").show();
+			$("#search-button").text("搜索");
+			$("#search-button").addClass("search-go");
+		}
+	}
+	function searchCancle(){
+		$("#search-over").fadeOut(50);
+		$("#search-warmp").hide();
+	}
+	function searchGo(){
+		//设置最近搜索
+		setHistory("history",$("#keywords").val());
+		getHistory("history",$("#history p"));
+		var k = $("#keywords").val();
+		var url = "search.php@keyword="+k;
+		window.location = url;
+	}
+	//获取历史浏览记录
+	getHistory("history",$("#history p"));	
+</script>
+<script src="js/index.js"></script>
+<script src="js/foot.js"></script>
+</body>
+</html>

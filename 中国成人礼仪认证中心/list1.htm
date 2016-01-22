@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>标题</title>
+<meta name="Keywords" content="关键字">
+<meta name="Description" content="描述">
+<link rel="dns-prefetch" href="http://img.boai.com/default.htm">
+<link rel="apple-touch-icon-precomposed" href="logo_icon.png">
+<link rel="icon" href="favicon.ico" mce_href="http://m.boai.com/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/TouchSlide.1.1.js"></script>
+
+
+<base target="_self" >
+</head>
+<body>
+ 
+<div id="warmp" class="warmp">
+ 
+ 
+ 
+<div class="tab-news" id="tab-news">
+	<div class="tab-news-hd tab-hd-index">
+      <img src="images/xwdt.png">
+    </div>
+    <div class="tab-news-con">
+        <div class="con list-index active">
+            <ul>
+                <li><a href="dongtai/211484.html">&middot;“粉红时光 拯救乳房”沙龙 9月21日盛大开启</a></li><li><a href="../nankem.boai.com/dongtai/211483.shtml">&middot;博爱男科20周年 引高新技术重塑男人雄风</a></li><li><a href="../chankem.boai.com/dongtai/211447.shtml">&middot;九月开学季  孕妇学校虚席待您！</a></li><li><a href="boai/dongtai/211438.shtml">&middot;十月 “粉红丝带”在每个角落飘起</a></li><li><a href="../kouqiangm.boai.com/dongtai/211433.shtml">&middot;深圳博爱口腔国际生态美齿分享会火热报名中</a></li>            </ul>
+        
+        </div>
+       
+     
+    </div>
+</div>
+
+
+
+
+
+
+
+ 
+
+				  
+				  
+
+				  
+ 
+</div>
+
+
+
+
+<script>	
+	$(".search").bind("click",function(){
+		$("#search-over").fadeIn(50);
+		$("#search-warmp").show();
+		$("html,body").animate({scrollTop:0},200);
+		searchBtn();			
+		//TouchSlide({ slideCell:"#search-tab",titCell:".search-tab-hd li",mainCell:".search-tab-bd"});	//搜索切换
+		//搜索切换
+		$("#search-tab .search-tab-hd li").each(function(i) {$(this).click(function(){$(this).addClass("on").siblings().removeClass("on");$("#search-tab .search-tab-con").eq(i).show().siblings().hide();})
+        });
+		
+		$("#search-over").bind("touchmove",function(e){e.preventDefault()}, false);
+	});			
+	$("#search-clear").bind("click",function(){
+		$("#search-button").text("取消");
+		$("#search-button").removeClass("search-go").addClass("search-cancel");
+		$("#keywords").val("");
+		$(this).hide();		
+	});		
+	$("#keywords").bind("keyup input keywords",function(){
+		searchBtn()
+	});
+	$("#search-button").bind("click",function(){
+		if($(this).hasClass("search-go")){
+			searchGo()//搜索
+		}else{
+			searchCancle();//取消搜索 
+		}
+	});	
+	
+	$("#history .search-change").click(function(){
+		clearCookie('history');
+		getHistory("history",$("#history p"));
+	})
+	function searchBtn(){
+		if($("#keywords").val()==""){
+			$("#search-clear").hide();
+			$("#search-button").text("取消");
+			$("#search-button").removeClass("search-go");
+		}else{
+			$("i#search-clear").show();
+			$("#search-button").text("搜索");
+			$("#search-button").addClass("search-go");
+		}
+	}
+	function searchCancle(){
+		$("#search-over").fadeOut(50);
+		$("#search-warmp").hide();
+	}
+	function searchGo(){
+		//设置最近搜索
+		setHistory("history",$("#keywords").val());
+		getHistory("history",$("#history p"));
+		var k = $("#keywords").val();
+		var url = "search.php@keyword="+k;
+		window.location = url;
+	}
+	//获取历史浏览记录
+	getHistory("history",$("#history p"));	
+</script>
+<script src="js/index.js"></script>
+<script src="js/foot.js"></script>
+</body>
+</html>
