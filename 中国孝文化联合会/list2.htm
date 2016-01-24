@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>标题</title>
+<meta name="Keywords" content="关键字">
+<meta name="Description" content="描述">
+<link rel="dns-prefetch" href="http://img.boai.com/default.htm">
+<link rel="apple-touch-icon-precomposed" href="logo_icon.png">
+<link rel="icon" href="favicon.ico" mce_href="http://m.boai.com/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/TouchSlide.1.1.js"></script>
+
+
+<base target="_self" >
+</head>
+<body>
+<div id="nav-over"></div>
+<div id="warmp" class="warmp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				  
+<div class="syhd">
+	<div class="tab-news-hd tab-hd-index">
+      <img src="images/hdjx.png">
+    </div>
+	
+	<div class="fix" style="padding:10px;">
+       
+		<div class="fl" style="width:30%; margin-right:10px;"><img src="images/logo.png" width="100%" ></div>
+		<div class="fl" style="width:60%;">“粉红时光 拯救乳房”沙龙 9月21日盛大开启“粉红时光 拯救乳房”沙龙 9月21日盛大开启“粉红时光 拯救乳房”沙龙 9月21日盛大开启“粉红时光 拯救乳房”沙龙 9月21日盛大开启 </div>
+	
+	
+	</div>
+    
+    <div class="fix" style="padding:10px;">
+       
+		<div class="fl" style="width:30%; margin-right:10px;"><img src="images/logo.png" width="100%" ></div>
+		<div class="fl" style="width:60%;">“粉红时光 拯救乳房”沙龙 9月21日盛大开启“粉红时光 拯救乳房”沙龙 9月21日盛大开启“粉红时光 拯救乳房”沙龙 9月21日盛大开启“粉红时光 拯救乳房”沙龙 9月21日盛大开启 </div>
+	
+	
+	</div>
+	
+
+       	
+</div>
+
+				  
+				  
+
+				  
+				  
+				  
+				  
+
+</div>
+
+
+
+
+<script>	
+	$(".search").bind("click",function(){
+		$("#search-over").fadeIn(50);
+		$("#search-warmp").show();
+		$("html,body").animate({scrollTop:0},200);
+		searchBtn();			
+		//TouchSlide({ slideCell:"#search-tab",titCell:".search-tab-hd li",mainCell:".search-tab-bd"});	//搜索切换
+		//搜索切换
+		$("#search-tab .search-tab-hd li").each(function(i) {$(this).click(function(){$(this).addClass("on").siblings().removeClass("on");$("#search-tab .search-tab-con").eq(i).show().siblings().hide();})
+        });
+		
+		$("#search-over").bind("touchmove",function(e){e.preventDefault()}, false);
+	});			
+	$("#search-clear").bind("click",function(){
+		$("#search-button").text("取消");
+		$("#search-button").removeClass("search-go").addClass("search-cancel");
+		$("#keywords").val("");
+		$(this).hide();		
+	});		
+	$("#keywords").bind("keyup input keywords",function(){
+		searchBtn()
+	});
+	$("#search-button").bind("click",function(){
+		if($(this).hasClass("search-go")){
+			searchGo()//搜索
+		}else{
+			searchCancle();//取消搜索 
+		}
+	});	
+	
+	$("#history .search-change").click(function(){
+		clearCookie('history');
+		getHistory("history",$("#history p"));
+	})
+	function searchBtn(){
+		if($("#keywords").val()==""){
+			$("#search-clear").hide();
+			$("#search-button").text("取消");
+			$("#search-button").removeClass("search-go");
+		}else{
+			$("i#search-clear").show();
+			$("#search-button").text("搜索");
+			$("#search-button").addClass("search-go");
+		}
+	}
+	function searchCancle(){
+		$("#search-over").fadeOut(50);
+		$("#search-warmp").hide();
+	}
+	function searchGo(){
+		//设置最近搜索
+		setHistory("history",$("#keywords").val());
+		getHistory("history",$("#history p"));
+		var k = $("#keywords").val();
+		var url = "search.php@keyword="+k;
+		window.location = url;
+	}
+	//获取历史浏览记录
+	getHistory("history",$("#history p"));	
+</script>
+<script src="js/index.js"></script>
+<script src="js/foot.js"></script>
+</body>
+</html>

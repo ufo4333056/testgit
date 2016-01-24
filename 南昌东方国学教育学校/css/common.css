@@ -1,4 +1,4 @@
-﻿@charset "utf-8";
+@charset "utf-8";
 /* CSS Document */
 ul,li,dl,dt,dd,ol{ list-style-type:none; margin:0; padding:0;}
 h1,h2,h3,h4,h5,h6,form,input,textarea,label,table,tr,td,p,header,article,footer,nav,section,aside,menu{margin:0; padding:0;}
@@ -21,7 +21,7 @@ body{ margin:0;padding:0;font:14px/22px Microsoft Yahei;/* font-size:1em; line-h
 /**============ Reset End ===============**/
 .navs { background:url(../images/nav_bg.png) repeat-x}
 .navs li  {  float: left; width: 25%;    height: 45px;
-    font-size: 1.425em;
+    font-size: 16px;
     line-height: 45px; text-align: center;}
 .navs li a{ color: #664613;}
 

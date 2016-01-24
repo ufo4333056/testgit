@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>无标题文档</title>
+    <link href="css.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.sgallery.js"></script>
+    <script type="text/javascript" src="js/jquery.scroll.js"></script>
+    <script type="text/javascript">
+        //$(".nav li").hover(function(){$(this).find("div").fadeIn(300)},function(){$(this).find("div").fadeOut(300);});
+
+        $(function () {
+            $(".nav li").mouseenter(function () {
+                $this = $(this);
+                b = setTimeout(function () {
+                    $this.find("div").fadeIn(200)
+                }, 200);
+            }).mouseleave(function () {
+                clearTimeout(b);
+                $this.find("div").fadeOut(200)
+            });
+        })
+
+        /*产品导航*/
+
+        $(function () {
+            $(".category").click(function () {
+                $(this).siblings().find("ul").slideUp(200);
+                $(this).find("ul").slideDown(200)
+                $(this).siblings().find("div").removeClass("category_select")
+                $(this).find("div").addClass("category_select")
+
+
+
+            })
+
+            $("#tip").toggle(function () {
+                $(this).removeClass("tip1").addClass("tip2");
+                $("#service").animate({
+                    width: '162px'
+                });
+            }, function () {
+                $(this).removeClass("tip2").addClass("tip1");
+                $("#service").animate({
+                    width: '32px'
+                });
+
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+
+
+
+
+    <div class="t_wrap">
+        <div class="top">
+            <div class="logo">
+                <img src="images/logo.png" />
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+    <div class="nav_wrap">
+        <div class="nav">
+            <ul>
+                <li style="background:none;"><a> 首页</a></li>
+                <li><a href="">解决方案</a> </li>
+                <li><a href="">解决方案</a> </li>
+                <li><a href="">解决方案</a> </li>
+                <li><a href="">解决方案</a> </li>
+                <li><a href="">解决方案</a> </li>
+
+
+
+
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="body_wrap">
+        <div class="focus ">
+
+            <div class="FocusPic">
+                <div class="content" id="main-slide" style="width:1000px; text-align:center; height:300px; ">
+
+                    <div class="changeDiv">
+                        <a href="#">
+                            <img src="images/s1.png"></a>
+                        <a href="#" style="display: none; ">
+                            <img src="images/s1.png"></a>
+                        <a href="#" style="display: none; ">
+                            <img src="images/focus1.png"></a>
+                        <a href="#" style="display: none; ">
+                            <img src="images/focus2.png"></a>
+                        <div class="title-bg" style="width: 310px; "></div>
+                    </div>
+                    <!-- <div class="title-bg" style="width: 600px; "></div>
+      -->
+                </div>
+            </div>
+        </div>
+        <div class="main clearfix">
+            <div class="fl p10" style="width:310px;">
+                <div class="">
+                    <div class="">
+                        <img src="images/xhyw.png" width="300">
+                        <img src="images/img1.png">
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+            <div class="fl" style="width:330px;">
+                <div class="p10">
+                    <div class="f18 fb41401">我们的优势我们的优势我们的优势</div>
+                    <div class="f14 f666 lh200">我们的优势我们的优势我们的优势我们的优势我们的优势我们的优势</div>
+
+
+
+                </div>
+
+                <div class="p10 ">
+                    <ul class="li1">
+                        <li><a href="#">我们的优势我们的优势我们的优势</a></li>
+                        <li><a href="#">我们的优势我们的优势我们的优势</a></li>
+                        <li><a href="#">我们的优势我们的优势我们的优势</a></li>
+                        <li><a href="#">我们的优势我们的优势我们的优势</a></li>
+                        <li><a href="#">我们的优势我们的优势我们的优势</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="fr p10">
+                <div style="width:267px; border:2px solid #b96f0b ; height:240px;">
+
+                    <img src="images/video.png">
+
+
+                </div>
+            </div>
+        </div>
+        <div class="blank"></div>
+
+        <div class="" style="text-align:center">
+            <img src="images/hyfc.png">
+        </div>
+<div class="" style=" position:relative;">
+      <div id="scrollable" style="background:url(images/hyfc_bg.png) no-repeat;" >
+        <a title="prev" class="prev" href="javascript:;">
+          <img src="images/l.png"></a>
+        <a title="next" class="next" href="javascript:;">
+          <img src="images/r.png"></a>
+        <div  style="overflow: hidden; position: relative; visibility: visible; width: 850px; height:280px; margin:0 auto">
+          <div style="position: absolute; width:10000px; left: 0px;" class="scrollable_demo">
+            <a href="#">
+              <img src="images/s1.jpg" width="190" height="140" /><br>设计师：欧阳文静
+            </a>
+            <a href="#">
+              <img src="images/s2.jpg" width="190" height="140" /><br>设计师：欧阳文静
+            </a>
+            <a href="#">
+              <img src="images/s3.jpg" width="190" height="140" /><br>设计师：欧阳文静
+            </a>
+            <a href="#">
+              <img src="images/s4.jpg" width="190" height="140" /><br>设计师：欧阳文静
+            </a>
+            <a href="#">
+              <img src="images/s1.jpg" width="190" height="140" /><br>设计师：欧阳文静
+            </a>
+            <a href="#">
+              <img src="images/s2.jpg" width="190" height="140" /><br>设计师：欧阳文静
+            </a>
+            <a href="#">
+              <img src="images/s3.jpg" width="190" height="140" /><br>设计师：欧阳文静
+            </a>
+            <a href="#">
+              <img src="images/s4.jpg" width="190" height="140" /><br>设计师：欧阳文静</a>
+            
+              <a href="#">
+                <img src="images/s2.jpg" width="190" height="140" /><br>设计师：欧阳文静
+              </a>
+              <a href="#">
+                <img src="images/s3.jpg" width="190" height="140" /><br>基本原则
+              </a>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+        <div class="blank"></div>
+      
+
+
+            <div class="blank"></div>
+
+
+            <div class="jd_bg clearfix">
+            
+        
+        <div class="jd_bg clearfix">
+            <div class="fl" style="width:260px;  padding-left:40px; margin-top:40px; background:url(images/rxjd.png) no-repeat 20px center;">
+                <div class="p10">
+                    <ul class="li1">
+                        <li><a href="#">我们的优势我们的优势我们的优势</a></li>
+                        <li><a href="#">我们的优势我们的优势我们的优势</a></li>
+                        <li><a href="#">我们的优势我们的优势我们的优势</a></li>
+                        <li><a href="#">我们的优势我们的优势我们的优势</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="fl" style="width:260px;  padding-left:40px; margin-top:40px; background:url(images/djjd.png) no-repeat 20px center;">
+                <div class="p10">
+                    <ul class="li1">
+                        <li><a href="#">我们的优势我们的优势我们的优势</a></li>
+                        <li><a href="#">我们的优势我们的优势我们的优势</a></li>
+                        <li><a href="#">我们的优势我们的优势我们的优势</a></li>
+                        <li><a href="#">我们的优势我们的优势我们的优势</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="fl" style="width:260px;  padding-left:40px; margin-top:40px; background:url(images/fxjd.png) no-repeat 20px center;">
+                <div class="p10">
+                    <ul class="li1">
+                        <li><a href="#">我们的优势我们的优势我们的优势</a></li>
+                        <li><a href="#">我们的优势我们的优势我们的优势</a></li>
+                        <li><a href="#">我们的优势我们的优势我们的优势</a></li>
+                        <li><a href="#">我们的优势我们的优势我们的优势</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            </div>
+
+
+       
+
+         
+
+
+
+
+ 
+
+    </div>
+
+
+    <div class="footer">
+        <div class="foot_copy">
+            地址：江西鸿远科技有限公司江西鸿远科技有限公司 联系电话：0592-5784878/13806027708 网站技术支持：南昌网站建设 Copyright @ 2008-2014 版权所有 江西鸿远科技有限公司
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            new slide("#main-slide", "cur", 1000, 300, 1, ".prev", ".next", true); //焦点图
+            new slide("#main-slide2", "cur", 300, 200, 1); //焦点图
+            new SwapTab(".link_tit", "div", ".link_content", "div", "fb"); //友情链接TAB
+            //排行TAB
+        })
+    </script>
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function () {
+            $("#scrollable").Scroll({
+                line: 3,
+                speed: 1000,
+                timer: 3000,
+                left: ".prev",
+                right: ".next",
+                autoPlay: "true"
+            });
+        });
+    </script>
+</body>
+
+</html>
