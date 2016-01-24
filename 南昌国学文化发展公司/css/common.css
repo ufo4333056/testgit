@@ -14,16 +14,16 @@ body{ margin:0;padding:0;font:14px/22px Microsoft Yahei;/* font-size:1em; line-h
 .fix:after {visibility: hidden;display: block;font-size: 0;content:""; clear: both; height: 0;}
 .fix{*zoom:1;}
 .bg{ background:#F5F5F5;}
-
+.wrap {  margin: 0 15px; border: 15px solid #fcbb1e;;}
 
 
 
 /**============ Reset End ===============**/
-.navs { background: #c00;}
+.navs { background: url(../images/nav-bg.png) ; background-size: 100% 100%; padding: 0 20px;}
 .navs li  {  float: left; width: 25%;    height: 45px;
     font-size: 16px;
     line-height: 45px; text-align: center;}
-.navs li a{ color: #fff;}
+.navs li a{ color: #8d0205;}
 
 .foot-navs{ width: 100%; padding: 10px 0px;  }
 .foot-navs li { width: 25%; text-align: center; float: left;}
@@ -46,7 +46,7 @@ body{ margin:0;padding:0;font:14px/22px Microsoft Yahei;/* font-size:1em; line-h
 .links .bd{padding:20px;}
 .links .bd a{margin:0 10px;font-size:24px;color:#666;}
 /**============底部=================**/
-.copyright{text-align:center;margin:1em 0;font-size:1em; line-height:1.6em;color:#999;  background: url(../images/foot_bg.png) center top ; background-size: cover; padding-top: 20px; padding-bottom: 20px;}
+.copyright{text-align:center;margin:1em 0;font-size:1em; line-height:1.6em;color:#999; border-top: #ffd200 solid 2px;  background: #fff ; background-size: cover; padding-top: 20px; padding-bottom: 20px;}
 .copyright a{color:#999;}
 .footer{height:119px}
 .footer-con{width:100%;height:118px;position:fixed; z-index:100; right:0; bottom:0;background:#339ee2;border-top:1px solid #4dbaff;-webkit-transition:right .5s ease;transition:right .5s ease;}
