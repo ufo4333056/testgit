@@ -184,7 +184,7 @@ function slide(Name, Class, Width, Height, fun,Prev,Next,AutoPlay) {
 		botLast: Name +' '+ Prev, //按钮上一个
 		botNext: Name+' '+ Next, //按钮下一个
 		autoChange : AutoPlay,
-		thumbNowClass: Class,
+		thumbNowClass: Class
 		
 	});
 	$(Name + " .title-bg").width(Width);
